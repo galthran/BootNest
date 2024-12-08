@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: BootNest
+
+  security:
+    user:
+      name: user
+      password: pa$w0rd
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: beans,mappings
+  info:
+    env:
+      enabled: true
+
+#Actuator /info data
+info:
+  app:
+    name: BootNest
+    version: 0.0.1
