@@ -3,12 +3,12 @@ package com.jarosinski.bootnest.coach;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CricketCoach implements Coach {
+public class BaseballCoach implements Coach {
 
-    public static final String BEAN_NAME = "cricketCoach";
+    public static final String BEAN_NAME = "baseballCoach";
 
     @Override
     public String getDailyWorkout() {
-        return "Practice fast bowling for 15 minutes";
+        return "Spend 30 minutes on batting practice";
     }
 }
