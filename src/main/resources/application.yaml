@@ -2,6 +2,12 @@ spring:
   application:
     name: BootNest
 
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/boot_nest
+    username: pgadmin
+    password: 11asddsa
+
   security:
     user:
       name: user
@@ -22,3 +28,6 @@ info:
   app:
     name: BootNest
     version: 0.0.1
+
+server:
+  port: 8090
