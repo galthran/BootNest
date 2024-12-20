@@ -24,12 +24,12 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="first_name")
+    @Column(name="first_name", nullable = false, length = 32)
     private String firstName;
 
-    @Column(name="last_name")
+    @Column(name="last_name", nullable = false, length = 64)
     private String lastName;
 
-    @Column(name="email")
+    @Column(name="email", length = 256)
     private String email;
 }

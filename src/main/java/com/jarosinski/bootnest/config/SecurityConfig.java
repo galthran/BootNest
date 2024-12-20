@@ -16,6 +16,8 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth ->
                 auth.requestMatchers("/daily-workout").permitAll()
+                .requestMatchers("/api/students/**").permitAll()
+                .requestMatchers("/api/student").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(AbstractAuthenticationFilterConfigurer::permitAll

@@ -1,12 +1,23 @@
+logging:
+  level:
+    org:
+      hibernate:
+        type: debug
+
 spring:
   application:
     name: BootNest
+  main:
+    banner-mode: log #off
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/boot_nest
-    username: pgadmin
-    password: 11asddsa
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
 
   security:
     user:
