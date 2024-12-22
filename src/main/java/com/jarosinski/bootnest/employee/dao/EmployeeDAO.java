@@ -4,6 +4,7 @@ import com.jarosinski.bootnest.employee.entity.Employee;
 
 import java.util.List;
 
+@Deprecated
 public interface EmployeeDAO {
 
     Employee save(Employee employee);

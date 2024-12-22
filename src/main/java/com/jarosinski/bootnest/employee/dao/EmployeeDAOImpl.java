@@ -10,6 +10,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Repository
+@Deprecated
 public class EmployeeDAOImpl implements EmployeeDAO {
 
     private final EntityManager entityManager;
