@@ -65,7 +65,7 @@ class EmployeeDAOImplTest {
     void testUpdate() {
         Employee employee = new Employee();
         when(entityManager.merge(employee)).thenReturn(employee);
-        Employee result = employeeDAO.update(employee);
+        Employee result = employeeDAO.save(employee);
         assertEquals(employee, result);
     }
 }

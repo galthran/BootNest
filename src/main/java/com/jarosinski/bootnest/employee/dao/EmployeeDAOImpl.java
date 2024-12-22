@@ -4,6 +4,7 @@ import com.jarosinski.bootnest.employee.entity.Employee;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,8 +15,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     private final EntityManager entityManager;
 
     @Override
-    public void save(Employee employee) {
-        entityManager.persist(employee);
+    public Employee save(Employee employee) {
+         return entityManager.merge(employee);
     }
 
     @Override
@@ -31,10 +32,5 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void deleteById(int id) {
         entityManager.remove(entityManager.find(Employee.class, id));
-    }
-
-    @Override
-    public Employee update(Employee employee) {
-        return entityManager.merge(employee);
     }
 }
