@@ -24,6 +24,10 @@ spring:
       name: user
       password: pa$w0rd
 
+  data:
+    rest:
+      base-path: /api
+
 management:
   endpoints:
     web:

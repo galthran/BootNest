@@ -16,7 +16,7 @@ public class EmployeeRestController {
 
     private final EmployeeService employeeService;
 
-    @GetMapping
+    /*@GetMapping
     public ResponseEntity<List<EmployeeDTO>> getAllEmployees() {
         return ResponseEntity.ok(employeeService.findAll());
     }
@@ -43,5 +43,5 @@ public class EmployeeRestController {
     public ResponseEntity<Void> deleteEmployee(@PathVariable("id") int id) {
         employeeService.deleteById(id);
         return ResponseEntity.noContent().build();
-    }
+    }*/
 }
