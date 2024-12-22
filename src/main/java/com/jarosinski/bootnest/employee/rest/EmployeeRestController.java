@@ -1,13 +1,9 @@
 package com.jarosinski.bootnest.employee.rest;
 
-import com.jarosinski.bootnest.employee.dto.EmployeeDTO;
 import com.jarosinski.bootnest.employee.service.EmployeeService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.net.URI;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/employees")
